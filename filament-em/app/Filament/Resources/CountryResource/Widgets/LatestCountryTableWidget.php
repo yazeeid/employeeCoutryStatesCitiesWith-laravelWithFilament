@@ -11,6 +11,7 @@ class LatestCountryTableWidget extends BaseWidget
 {
     public function table(Table $table): Table
     {
+
         return $table
             ->query(Country::query())
             ->defaultSort('name','asec')
