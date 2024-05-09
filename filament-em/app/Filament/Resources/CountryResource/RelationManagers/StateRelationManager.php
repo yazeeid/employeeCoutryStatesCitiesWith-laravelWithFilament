@@ -21,6 +21,8 @@ class StateRelationManager extends RelationManager
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+
+                Forms\Components\TextInput::make('country_id')
             ]);
     }
 
@@ -29,7 +31,8 @@ class StateRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('name')
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')
+                ->sortable(),
                 Tables\Columns\TextColumn::make('id')
             ])
             ->filters([
